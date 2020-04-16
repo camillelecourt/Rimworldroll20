@@ -1,0 +1,571 @@
+<DIV>
+    Nom : <INPUT type="text" name="attr_character_name" placeholder="Saisissez Nom"></INPUT>  Age : <INPUT type="number" name="attr_AGE" placeholder="Age"></INPUT>
+</DIV>
+
+<DIV>
+    Info et Description : <TEXTAREA name="attr_PJDESC" title="Description de votre personnage" placeholder="Description de votre personnage et info"></TEXTAREA>
+</DIV>
+<DIV>
+    Armes :
+    <fieldset class="repeating_armes">
+        <SELECT name="attr_armes_nom">
+            <OPTION value="Arc" selected>Arc</OPTION>
+            <OPTION value="Dague">Dague</OPTION>
+            <OPTION value="Lance/Epée">Lance/Epée</OPTION>
+            <OPTION value="Massue">Massue</OPTION>
+            <OPTION value="Marteau de guerre">Marteau de guerre</OPTION>
+            <OPTION value="Pistolet">Pistolet</OPTION>
+            <OPTION value="Fusil d'Assault">Fusil d'Assault</OPTION>
+            <OPTION value="Carabine">Carabine</OPTION>
+            <OPTION value="Lanceur de balle incendiaires">Lanceur de balle incendiaires</OPTION>
+            <OPTION value="Fusil à pompe">Fusil à pompe</OPTION>
+            <OPTION value="Marteau de guerre motorisé">Marteau de guerre motorisé</OPTION>
+            <OPTION value="Epée électrifié">Epée électrifié</OPTION>
+            <OPTION value="Fusil à impultion">Fusil à impultion</OPTION>
+            <OPTION value="Fusil de Sniper">Fusil de Sniper</OPTION>
+            <OPTION value="Lance roquette">Lance roquette</OPTION>
+            <OPTION value="Minigun">Minigun</OPTION>
+            <OPTION value="Marteau de guerre en Aurite">Marteau de guerre en Aurite</OPTION>
+            <OPTION value="Epée en Aurite">Epée en Aurite</OPTION>
+            <OPTION value="Fusil d'assault en Aurite">Fusil d'assault en Aurite</OPTION>
+            <OPTION value="Fusil de sniper en Aurite">Fusil de sniper en Aurite</OPTION>
+            <OPTION value="Lance roquette en Aurite">Lance roquette en Aurite</OPTION>
+            <OPTION value="Fusil à pompe en Aurite">Fusil à pompe en Aurite</OPTION>
+            <OPTION value="Marteau de guerre en Métal des étoiles">Marteau de guerre en Métal des étoiles</OPTION>
+            <OPTION value="Epée en métal des étoiles">Epée en métal des étoiles</OPTION>
+            <OPTION value="Fusil d'assault en métal des étoiles">Fusil d'assault en métal des étoiles</OPTION>
+            <OPTION value="Fusil de sniper en métal des étoiles">Fusil de sniper en métal des étoiles</OPTION>
+            <OPTION value="Lance roquette en métal des étoiles">Lance roquette en métal des étoiles</OPTION>
+            <OPTION value="Fusil à pompe en métal des étoiles">Fusil à pompe en métal des étoiles</OPTION>
+        </SELECT>
+
+      <BUTTON type="roll" name="armes_JetForce" value="/roll 1d20" title="Jet de Force">Jet</BUTTON>
+      
+      Dégât <input type="number" name="attr_armes_Dégât" value="0"/>
+      Portée <input type="number" name="attr_armes_Portée" value="0"/>
+      Munition <input type="number" name="attr_armes_Munition" value="0"/>
+      / <input type="number" name="attr_armes_Munition-rest" value="0"/>
+      Délai <input type="number" name="attr_armes_Délai" value="0"/>
+      Coût <input type="text" name="attr_armes_Coût" value="0"/>
+    </fieldset>
+</DIV>
+<DIV>
+	Manipulation : <input type="number" name="attr_manipulation" value="0"/> %
+	Mouvement  : <input type="number" name="attr_Mouvement" value="0"/> %
+	Vision : <input type="number" name="attr_Vision" value="0"/> %
+</DIV>
+<DIV>
+	Métabolisme : <input type="number" name="attr_Métabolisme" value="0"/> %
+	Bonus social : <input type="number" name="attr_Bonus-social" value="0"/>
+	Dégât au corps à corps: <input type="number" name="attr_Corps-à-cops" value="0"/>
+</DIV>
+<DIV>
+    <SELECT name="attr_Casque_nom">
+        <OPTION value="guerrier" selected>Protection à la Tête</OPTION>
+        <OPTION value="guerrier">Casque simple</OPTION>
+        <OPTION value="mage">Casque Composite</OPTION>
+        <OPTION value="comptable">Casque d'Armure énergétique</OPTION>
+        <OPTION value="mage">Casque d'armure en Aurite</OPTION>
+        <OPTION value="mage">Casque d'armure en Métal des étoiles</OPTION>
+    </SELECT>
+    Protection <input type="number" name="attr_Casque_Protec" value="0"/>
+    Zones couvertes <input type="number" name="attr_Casque_Zones" value="0"/>
+</DIV>
+<DIV>
+    <SELECT name="attr_Armures_nom">
+        <OPTION value="guerrier" selected>Protection du Corps</OPTION>
+        <OPTION value="mage">Armure de Plaque</OPTION>
+        <OPTION value="comptable">Gillet parre Balles</OPTION>
+        <OPTION value="mage">Armure énergétique</OPTION>
+        <OPTION value="mage">Armure en Aurite</OPTION>
+        <OPTION value="mage">Armure en Métal des étoiles</OPTION>
+    </SELECT>
+    Protection <input type="number" name="attr_Armures_Protec" value="0"/>
+    Zones couvertes <input type="number" name="attr_Armures_Zones" value="0"/>
+</DIV>
+<DIV>
+    <SELECT name="attr_Veste_nom">
+        <OPTION value="guerrier" selected>Aucun Manteau équipé</OPTION>
+        <OPTION value="mage">Manteau en Tissu</OPTION>
+        <OPTION value="comptable">Manteau en Diablétofe</OPTION>
+        <OPTION value="mage">Manteau en Synthé</OPTION>
+        <OPTION value="mage">Manteau en Hyperfibre</OPTION>
+        <OPTION value="mage">Manteau en fibre de Métal des étoiles</OPTION>
+    </SELECT>
+    Protection <input type="number" name="attr_Veste_Protec" value="0"/>
+    Zones couvertes <input type="number" name="attr_Veste_Zones" value="0"/>
+</DIV>
+<DIV>
+    <SELECT name="attr_T-shirt_nom">
+        <OPTION value="guerrier" selected>Aucun T-shirt équipé</OPTION>
+        <OPTION value="mage">T-shirt en Tissu</OPTION>
+        <OPTION value="comptable">T-shirt en Diablétofe</OPTION>
+        <OPTION value="mage">T-shirt en Synthé</OPTION>
+        <OPTION value="mage">T-shirt en Hyperfibre</OPTION>
+        <OPTION value="mage">T-shirt en fibre de Métal des étoiles</OPTION>
+    </SELECT>
+    Protection <input type="number" name="attr_T-shirt_rotec" value="0"/>
+    Zones couvertes <input type="number" name="attr_T-shirt_Zones" value="0"/>
+</DIV>
+<DIV>
+    <SELECT name="attr_Pantalon_nom">
+        <OPTION value="guerrier" selected>Aucun Pantalon équipé</OPTION>
+        <OPTION value="mage">Pantalon en Tissu</OPTION>
+        <OPTION value="comptable">Pantalon en Diablétofe</OPTION>
+        <OPTION value="mage">Pantalon en Synthé</OPTION>
+        <OPTION value="mage">Pantalon en Hyperfibre</OPTION>
+        <OPTION value="mage">Pantalon en fibre de Métal des étoiles</OPTION>
+    </SELECT>
+    Protection <input type="number" name="attr_Pantalon_rotec" value="0"/>
+    Zones couvertes <input type="number" name="attr_Pantalon_Zones" value="0"/>
+</DIV>
+<DIV>
+Compétences :
+</DIV>
+<DIV>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Tir.png">
+	<input type="number" name="attr_Comp-Tir" value="0"/> Xp : <input type="number" name="attr_Comp-Tir_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Tir : [[@{Comp-Tir}-1d20]]" title="">Jet</BUTTON>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Melle.png">
+	<input type="number" name="attr_Comp-Méllé" value="0"/> Xp : <input type="number" name="attr_Comp-Mellé_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Méllé : [[@{Comp-Méllé}-1d20]]" title="">Jet</BUTTON>
+
+</DIV>
+<DIV>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Soin.png">
+	<input type="number" name="attr_Comp-Soin" value="0"/> Xp : <input type="number" name="attr_Comp-Soin_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Soin : [[[[@{Comp-Soin}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Charisme.png">
+	<input type="number" name="attr_Comp-Voix" value="0"/> Xp : <input type="number" name="attr_Comp-Voix_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Charisme : [[@{Comp-Voix}-1d20+@{Bonus-social}]]" title="">Jet</BUTTON>
+</DIV>
+<DIV>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/cooking-icon.png">
+	<input type="number" name="attr_Comp-Cuisine" value="0"/> Xp : <input type="number" name="attr_Comp-Cuisine_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Cuisine : [[[[@{Comp-Cuisine}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Agriculture.png">
+	<input type="number" name="attr_Comp-Agriculture" value="0"/> Xp : <input type="number" name="attr_Comp-Agriculture_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet d'Agriculture : [[[[@{Comp-Agriculture}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+</DIV>
+<DIV>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Artisanat.png">
+	<input type="number" name="attr_Comp-Artisanat" value="0"/> Xp : <input type="number" name="attr_Comp-Artisanat_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet d'Arisanat : [[[[@{Comp-Artisanat}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Construction2.png">
+	<input type="number" name="attr_Comp-Minage" value="0"/> Xp : <input type="number" name="attr_Comp-Minage_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Construction / Minage : [[[[@{Comp-Minage}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+</DIV>
+<DIV>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Art.png">
+	<input type="number" name="attr_Comp-Art" value="0"/> Xp : <input type="number" name="attr_Comp-Art_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet d'Art : [[[[@{Comp-Art}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+	<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Documents-glasses-512.png">
+	<input type="number" name="attr_Comp-Recherche" value="0"/> Xp : <input type="number" name="attr_Comp-Recherche_Xp" value="0"/>
+	<BUTTON type="roll" name="Jet_Tir" value="Jet de Recherche : [[[[@{Comp-Recherche}-1d20]]*[[@{Manipulation}]]]]" title="">Jet</BUTTON>
+</DIV>
+
+<DIV>
+	Partie du corps :
+</DIV>
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Oreille_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Oreille_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Oreille_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Gauche" value="3"> Bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Oreille_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Oreille_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Oreille_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Oreille_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Oreille_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Oreille_Droite" value="3"> Bionique avancé</INPUT>
+</DIV>
+
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Cerveau_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Cerveau_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Cerveau_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Cerveau_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Cerveau_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Cerveau_Gauche" value="2"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Cerveau_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Cerveau_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Cerveau_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Cerveau_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Cerveau_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Cerveau_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Cerveau_Droite" value="2"> bionique avancé</INPUT>
+</DIV>
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Oeil_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Oeil_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Oeil_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Oeil_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Gauche" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Oeil_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Oeil_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Oeil_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Oeil_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Oeil_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Oeil_Droite" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Machoire.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Machoire" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Machoire" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Machoire" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Machoire" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Machoire" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Machoire" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Machoire" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Machoire" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Machoire" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Machoire" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Bras_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Bras_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Bras_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Bras_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Gauche" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Bras_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Bras_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Bras_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Bras_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Bras_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Bras_Droite" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Coeur.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Coeur" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Coeur" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Coeur" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Coeur" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Coeur" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Coeur" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Coeur" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Coeur" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Coeur" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Coeur" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Colonne.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Colonne" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Colonne" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Colonne" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Colonne" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Colonne" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Colonne" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Colonne" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Colonne" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Colonne" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Colonne" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Poumon_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Poumon_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Poumon_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Poumon_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Gauche" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Poumon_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Poumon_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Poumon_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Poumon_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Poumon_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Poumon_Droite" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Rein_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Rein_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Rein_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Rein_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Gauche" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Rein_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Rein_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Rein_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Rein_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Rein_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Rein_Droite" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Systheme_Digestif.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Systheme_Digestif" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Systheme_Digestif" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Systheme_Digestif" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Systheme_Digestif" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Systheme_Digestif" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Systheme_Digestif" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Systheme_Digestif" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Systheme_Digestif" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Systheme_Digestif" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Systheme_Digestif" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Jambe_Gauche.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Jambe_Gauche" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Jambe_Gauche" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Gauche" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Gauche" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Gauche" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Gauche" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Jambe_Gauche" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Gauche" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Gauche" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Gauche" value="3"> bionique avancé</INPUT>
+</DIV>
+<img src="https://raw.githubusercontent.com/camillelecourt/Rimworldroll20/master/Jambe_Droite.png">
+<DIV>
+	Protection : <input type="number" name="attr_P-Jambe_Droite" value="0"/>
+</DIV>
+<DIV>
+    Blessures : 
+   <INPUT type="radio" name="attr_B-Jambe_Droite" value="0" checked> Aucunes</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Droite" value="1"> Mineure</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Droite" value="2"> Moyenne</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Droite" value="3"> Majeure</INPUT>
+   <INPUT type="radio" name="attr_B-Jambe_Droite" value="4"> Mortelle</INPUT>
+</DIV>
+<DIV>
+	Etat : 
+   <INPUT type="radio" name="attr_E-Jambe_Droite" value="0" > Diminué</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Droite" value="1" checked> Normal</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Droite" value="2"> bionique</INPUT>
+   <INPUT type="radio" name="attr_E-Jambe_Droite" value="3"> bionique avancé</INPUT>
+</DIV>
+
+
+
+<script type = "text/worker" >
+	on("change:mouvement", function () {    
+	     getAttrs(["mouvement"],  function (values) {
+		let mouve = parseInt(values.mouvement) || 0;
+	    let manip = mouve + 100;
+		setAttrs({
+		    manipulation:manip
+			});    
+	    });
+	});
+</script>
