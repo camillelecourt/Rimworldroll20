@@ -562,10 +562,10 @@ Compétences :
 	on("change:mouvement", function () {    
 	     getAttrs(["mouvement"],  function (values) {
 		let mouve = parseInt(values.mouvement) || 0;
-	    let manip = mouve + 100;
+	    	let manip = mouve + 100;
 		setAttrs({
 		    manipulation:manip
-			});    
+		});    
 	    });
 	});
 </script>
